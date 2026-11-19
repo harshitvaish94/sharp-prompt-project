@@ -1,0 +1,13 @@
+# Provisional (Person 1). Person 3 pins exact versions with `pip freeze` after the full pipeline runs.
+torch
+transformers
+datasets
+sentence-transformers
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+streamlit
+sentencepiece
+accelerate

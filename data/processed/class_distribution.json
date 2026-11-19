@@ -1,0 +1,68 @@
+{
+  "train": {
+    "n": 3997,
+    "counts": {
+      "sadness": 1166,
+      "joy": 1341,
+      "love": 325,
+      "anger": 539,
+      "fear": 484,
+      "surprise": 142
+    },
+    "percent": {
+      "sadness": 29.17,
+      "joy": 33.55,
+      "love": 8.13,
+      "anger": 13.49,
+      "fear": 12.11,
+      "surprise": 3.55
+    },
+    "imbalance_ratio": 9.44,
+    "majority_class": "joy",
+    "minority_class": "surprise"
+  },
+  "val": {
+    "n": 999,
+    "counts": {
+      "sadness": 275,
+      "joy": 351,
+      "love": 89,
+      "anger": 137,
+      "fear": 106,
+      "surprise": 41
+    },
+    "percent": {
+      "sadness": 27.53,
+      "joy": 35.14,
+      "love": 8.91,
+      "anger": 13.71,
+      "fear": 10.61,
+      "surprise": 4.1
+    },
+    "imbalance_ratio": 8.56,
+    "majority_class": "joy",
+    "minority_class": "surprise"
+  },
+  "test": {
+    "n": 998,
+    "counts": {
+      "sadness": 290,
+      "joy": 346,
+      "love": 79,
+      "anger": 138,
+      "fear": 112,
+      "surprise": 33
+    },
+    "percent": {
+      "sadness": 29.06,
+      "joy": 34.67,
+      "love": 7.92,
+      "anger": 13.83,
+      "fear": 11.22,
+      "surprise": 3.31
+    },
+    "imbalance_ratio": 10.48,
+    "majority_class": "joy",
+    "minority_class": "surprise"
+  }
+}
