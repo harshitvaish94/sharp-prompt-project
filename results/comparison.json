@@ -3,43 +3,43 @@
     "selected_template": "original",
     "lambda": 0.5,
     "selection_formula": "Score = Macro-F1 - lambda * Sharpness",
-    "best_selection_score": 0.6587,
+    "best_selection_score": 0.6607,
     "scored_templates": {
       "original": {
         "val_macro_f1": 0.6712,
         "val_accuracy": 0.7037,
-        "sharpness": 0.025,
-        "selection_score": 0.6587
+        "sharpness": 0.021,
+        "selection_score": 0.6607
       },
       "template_concise": {
         "val_macro_f1": 0.4626,
         "val_accuracy": 0.5766,
-        "sharpness": 0.1294,
-        "selection_score": 0.3979
+        "sharpness": 0.1254,
+        "selection_score": 0.3999
       },
       "template_question": {
         "val_macro_f1": 0.6265,
         "val_accuracy": 0.6637,
-        "sharpness": 0.0474,
-        "selection_score": 0.6028
+        "sharpness": 0.0434,
+        "selection_score": 0.6048
       },
       "template_context": {
         "val_macro_f1": 0.6368,
         "val_accuracy": 0.6797,
-        "sharpness": 0.0423,
-        "selection_score": 0.6156
+        "sharpness": 0.0383,
+        "selection_score": 0.6176
       },
       "template_instruction": {
         "val_macro_f1": 0.6218,
         "val_accuracy": 0.6406,
-        "sharpness": 0.0498,
-        "selection_score": 0.5969
+        "sharpness": 0.0458,
+        "selection_score": 0.5989
       },
       "template_roleplay": {
         "val_macro_f1": 0.6318,
         "val_accuracy": 0.6577,
-        "sharpness": 0.0448,
-        "selection_score": 0.6094
+        "sharpness": 0.0408,
+        "selection_score": 0.6114
       }
     }
   },
@@ -76,22 +76,22 @@
         "fear": 0.7037,
         "surprise": 0.5225
       },
-      "sharpness": 0.0627,
+      "sharpness": 0.0587,
       "n_test": 998
     },
     "minilm_cross_entropy": {
       "name": "MiniLM + Cross-Entropy",
       "type": "embedding_mlp",
       "accuracy": 0.6824,
-      "macro_f1": 0.5928,
-      "minority_f1_love_surprise": 0.4167,
+      "macro_f1": 0.5932,
+      "minority_f1_love_surprise": 0.4216,
       "per_class_f1": {
-        "sadness": 0.7424,
-        "joy": 0.7371,
-        "love": 0.4604,
-        "anger": 0.6667,
-        "fear": 0.5771,
-        "surprise": 0.3729
+        "sadness": 0.744,
+        "joy": 0.7389,
+        "love": 0.4571,
+        "anger": 0.6644,
+        "fear": 0.5686,
+        "surprise": 0.386
       },
       "sharpness": null,
       "n_test": 998
@@ -100,16 +100,16 @@
       "name": "MiniLM + Focal Loss (gamma=2)",
       "type": "embedding_mlp",
       "gamma": 2.0,
-      "accuracy": 0.6623,
-      "macro_f1": 0.5658,
-      "minority_f1_love_surprise": 0.3511,
+      "accuracy": 0.6693,
+      "macro_f1": 0.5704,
+      "minority_f1_love_surprise": 0.3643,
       "per_class_f1": {
-        "sadness": 0.7248,
-        "joy": 0.72,
-        "love": 0.3919,
-        "anger": 0.6569,
+        "sadness": 0.7365,
+        "joy": 0.7179,
+        "love": 0.4148,
+        "anger": 0.6489,
         "fear": 0.5909,
-        "surprise": 0.3103
+        "surprise": 0.3137
       },
       "sharpness": null,
       "n_test": 998
@@ -129,19 +129,19 @@
       "rank": 2,
       "key": "minilm_cross_entropy",
       "name": "MiniLM + Cross-Entropy",
-      "macro_f1": 0.5928,
+      "macro_f1": 0.5932,
       "accuracy": 0.6824,
-      "minority_f1": 0.4167,
-      "improvement_over_baseline_macro_f1": 0.1253
+      "minority_f1": 0.4216,
+      "improvement_over_baseline_macro_f1": 0.1257
     },
     {
       "rank": 3,
       "key": "minilm_focal_loss",
       "name": "MiniLM + Focal Loss (gamma=2)",
-      "macro_f1": 0.5658,
-      "accuracy": 0.6623,
-      "minority_f1": 0.3511,
-      "improvement_over_baseline_macro_f1": 0.0983
+      "macro_f1": 0.5704,
+      "accuracy": 0.6693,
+      "minority_f1": 0.3643,
+      "improvement_over_baseline_macro_f1": 0.1029
     },
     {
       "rank": 4,
