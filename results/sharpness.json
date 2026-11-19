@@ -99,27 +99,27 @@
   },
   "paraphrase_sensitivity": {
     "n_samples": 998,
-    "n_flipped": 50,
-    "flip_rate": 0.0501,
+    "n_flipped": 42,
+    "flip_rate": 0.0421,
     "per_class_flip_rate": {
-      "sadness": 0.0379,
+      "sadness": 0.0207,
       "joy": 0.0549,
-      "love": 0.1013,
-      "anger": 0.058,
+      "love": 0.0886,
+      "anger": 0.0435,
       "fear": 0.0357,
       "surprise": 0.0
     },
     "original_accuracy": 0.7104,
-    "paraphrase_accuracy": 0.7004,
+    "paraphrase_accuracy": 0.6914,
     "original_macro_f1": 0.6657,
-    "paraphrase_macro_f1": 0.6548,
-    "macro_f1_gap": 0.0109
+    "paraphrase_macro_f1": 0.6439,
+    "macro_f1_gap": 0.0218
   },
   "sharpness_summary": {
-    "paraphrase_flip_rate": 0.0501,
+    "paraphrase_flip_rate": 0.0421,
     "template_mean_drop": 0.0753,
     "template_max_drop": 0.2087,
     "macro_f1_std": 0.0672,
-    "overall_sharpness_score": 0.0627
+    "overall_sharpness_score": 0.0587
   }
 }

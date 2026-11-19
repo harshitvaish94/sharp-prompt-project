@@ -64,9 +64,9 @@
   "template": "original",
   "benchmark": {
     "n_samples": 200,
-    "elapsed_seconds": 40.017,
-    "samples_per_second": 5.0,
-    "est_time_per_1000_seconds": 200.08
+    "elapsed_seconds": 28.679,
+    "samples_per_second": 6.97,
+    "est_time_per_1000_seconds": 143.39
   },
   "val_template_metrics": {
     "original": {
