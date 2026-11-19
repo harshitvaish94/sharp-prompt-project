@@ -19,20 +19,20 @@ short (fast CPU inference with flan-t5-base), and it is small enough to run in o
 
 | Class | Train count | Train % | Test count | Test % |
 |---|---|---|---|---|
-| sadness | | | | |
-| joy | | | | |
-| love | | | | |
-| anger | | | | |
-| fear | | | | |
-| surprise | | | | |
+| sadness | 1166 | 29.17 | 290 | 29.06 |
+| joy | 1341 | 33.55 | 346 | 34.67 |
+| love | 325 | 8.13 | 79 | 7.92 |
+| anger | 539 | 13.49 | 138 | 13.83 |
+| fear | 484 | 12.11 | 112 | 11.22 |
+| surprise | 142 | 3.55 | 33 | 3.31 |
 
-Imbalance ratio (majority / minority, train): `__` (`class_distribution.json` -> `train.imbalance_ratio`).
+Imbalance ratio (majority / minority, train): `9.44` (`class_distribution.json` -> `train.imbalance_ratio`).
 
 **Baseline (`python -m src.baseline`):** TF-IDF (1-2 grams, `min_df=2`, sublinear tf) + Logistic Regression with
 `class_weight=None`. Trained on train, evaluated once on test. Metrics (accuracy, macro F1, per-class F1, confusion
 matrix) come from the shared `src/metrics.py` and are written to `results/baseline_metrics.json`.
 
-**Baseline results (fill in from `results/baseline_metrics.json`):** accuracy `__`, macro F1 `__`.
+**Baseline results (fill in from `results/baseline_metrics.json`):** accuracy `0.6754` (67.54%), macro F1 `0.4675` (46.75%).
 
 **Limitations:**
 - Train is subsampled to 4k rows, so absolute scores are lower than full-data results in the literature.
