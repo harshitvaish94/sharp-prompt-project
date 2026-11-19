@@ -1,0 +1,162 @@
+{
+  "prompt_template_selection": {
+    "selected_template": "original",
+    "lambda": 0.5,
+    "selection_formula": "Score = Macro-F1 - lambda * Sharpness",
+    "best_selection_score": 0.6587,
+    "scored_templates": {
+      "original": {
+        "val_macro_f1": 0.6712,
+        "val_accuracy": 0.7037,
+        "sharpness": 0.025,
+        "selection_score": 0.6587
+      },
+      "template_concise": {
+        "val_macro_f1": 0.4626,
+        "val_accuracy": 0.5766,
+        "sharpness": 0.1294,
+        "selection_score": 0.3979
+      },
+      "template_question": {
+        "val_macro_f1": 0.6265,
+        "val_accuracy": 0.6637,
+        "sharpness": 0.0474,
+        "selection_score": 0.6028
+      },
+      "template_context": {
+        "val_macro_f1": 0.6368,
+        "val_accuracy": 0.6797,
+        "sharpness": 0.0423,
+        "selection_score": 0.6156
+      },
+      "template_instruction": {
+        "val_macro_f1": 0.6218,
+        "val_accuracy": 0.6406,
+        "sharpness": 0.0498,
+        "selection_score": 0.5969
+      },
+      "template_roleplay": {
+        "val_macro_f1": 0.6318,
+        "val_accuracy": 0.6577,
+        "sharpness": 0.0448,
+        "selection_score": 0.6094
+      }
+    }
+  },
+  "methods": {
+    "tfidf_logreg_baseline": {
+      "name": "TF-IDF + Logistic Regression",
+      "type": "classical_baseline",
+      "accuracy": 0.6754,
+      "macro_f1": 0.4675,
+      "minority_f1_love_surprise": 0.1,
+      "per_class_f1": {
+        "sadness": 0.7504,
+        "joy": 0.7466,
+        "love": 0.1412,
+        "anger": 0.5657,
+        "fear": 0.5422,
+        "surprise": 0.0588
+      },
+      "sharpness": null,
+      "n_test": 998
+    },
+    "flan_t5_prompt": {
+      "name": "FLAN-T5 Prompt Classifier (original)",
+      "type": "prompt_based_llm",
+      "selected_template": "original",
+      "accuracy": 0.7104,
+      "macro_f1": 0.6657,
+      "minority_f1_love_surprise": 0.5283,
+      "per_class_f1": {
+        "sadness": 0.7469,
+        "joy": 0.7579,
+        "love": 0.534,
+        "anger": 0.7292,
+        "fear": 0.7037,
+        "surprise": 0.5225
+      },
+      "sharpness": 0.0627,
+      "n_test": 998
+    },
+    "minilm_cross_entropy": {
+      "name": "MiniLM + Cross-Entropy",
+      "type": "embedding_mlp",
+      "accuracy": 0.6824,
+      "macro_f1": 0.5928,
+      "minority_f1_love_surprise": 0.4167,
+      "per_class_f1": {
+        "sadness": 0.7424,
+        "joy": 0.7371,
+        "love": 0.4604,
+        "anger": 0.6667,
+        "fear": 0.5771,
+        "surprise": 0.3729
+      },
+      "sharpness": null,
+      "n_test": 998
+    },
+    "minilm_focal_loss": {
+      "name": "MiniLM + Focal Loss (gamma=2)",
+      "type": "embedding_mlp",
+      "gamma": 2.0,
+      "accuracy": 0.6623,
+      "macro_f1": 0.5658,
+      "minority_f1_love_surprise": 0.3511,
+      "per_class_f1": {
+        "sadness": 0.7248,
+        "joy": 0.72,
+        "love": 0.3919,
+        "anger": 0.6569,
+        "fear": 0.5909,
+        "surprise": 0.3103
+      },
+      "sharpness": null,
+      "n_test": 998
+    }
+  },
+  "rankings_by_macro_f1": [
+    {
+      "rank": 1,
+      "key": "flan_t5_prompt",
+      "name": "FLAN-T5 Prompt Classifier (original)",
+      "macro_f1": 0.6657,
+      "accuracy": 0.7104,
+      "minority_f1": 0.5283,
+      "improvement_over_baseline_macro_f1": 0.1982
+    },
+    {
+      "rank": 2,
+      "key": "minilm_cross_entropy",
+      "name": "MiniLM + Cross-Entropy",
+      "macro_f1": 0.5928,
+      "accuracy": 0.6824,
+      "minority_f1": 0.4167,
+      "improvement_over_baseline_macro_f1": 0.1253
+    },
+    {
+      "rank": 3,
+      "key": "minilm_focal_loss",
+      "name": "MiniLM + Focal Loss (gamma=2)",
+      "macro_f1": 0.5658,
+      "accuracy": 0.6623,
+      "minority_f1": 0.3511,
+      "improvement_over_baseline_macro_f1": 0.0983
+    },
+    {
+      "rank": 4,
+      "key": "tfidf_logreg_baseline",
+      "name": "TF-IDF + Logistic Regression",
+      "macro_f1": 0.4675,
+      "accuracy": 0.6754,
+      "minority_f1": 0.1,
+      "improvement_over_baseline_macro_f1": 0.0
+    }
+  ],
+  "summary": {
+    "best_method": "FLAN-T5 Prompt Classifier (original)",
+    "best_macro_f1": 0.6657,
+    "baseline_macro_f1": 0.4675,
+    "max_improvement": 0.1982
+  }
+}
